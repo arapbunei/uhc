@@ -1,0 +1,18 @@
+›2023-06-14 20:17:36.083 [Test worker @coroutine#1] TRACE io.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///order/2020-04-06-01
+¤2023-06-14 20:17:36.281 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+}2023-06-14 20:17:36.920 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - Application started in 0.655 seconds.
+2023-06-14 20:17:37.027 [DefaultDispatcher-worker-1 @request#2] TRACE io.ktor.routing.Routing - Trace for [order, 2020-04-06-01]
+/, segment:0 -> SUCCESS @ /
+F  /customer, segment:0 -> FAILURE "Selector didn't match" @ /customer
+(  /order, segment:1 -> SUCCESS @ /order
+_    /order/(method:GET), segment:1 -> FAILURE "Not all segments matched" @ /order/(method:GET)
+W    /order/{id?}, segment:2 -> SUCCESS; Parameters [id=[2020-04-06-01]] @ /order/{id?}
+R      /order/{id?}/(method:GET), segment:2 -> SUCCESS @ /order/{id?}/(method:GET)
+\      /order/{id?}/total, segment:2 -> FAILURE "Selector didn't match" @ /order/{id?}/total
+Matched routes:
+-  "" -> "order" -> "{id?}" -> "(method:GET)"
+Route resolve result:
+G  SUCCESS; Parameters [id=[2020-04-06-01]] @ /order/{id?}/(method:GET)
+¥2023-06-14 20:17:37.211 [Test worker @coroutine#1] TRACE i.k.client.plugins.HttpCallValidator - Validating response for request http://localhost/order/2020-04-06-01
+«2023-06-14 20:17:37.212 [Test worker @coroutine#1] TRACE i.k.c.p.DefaultResponseValidation - Skipping default response validation for http://localhost/order/2020-04-06-01
+ß2023-06-14 20:17:37.230 [Test worker @coroutine#1] TRACE i.k.c.plugins.defaultTransformers - Transformed with default transformers response body for http://localhost/order/2020-04-06-01 to class io.ktor.utils.io.core.Input
