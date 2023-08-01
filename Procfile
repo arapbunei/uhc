@@ -1,0 +1,1 @@
+web: ./build/install/uhc_api/bin/uhc_api
